@@ -24,10 +24,6 @@ namespace GestaoProjetos.Infra.Data.Configurations
                 .IsRequired()
                 .HasConversion<string>();
 
-            builder.HasMany(u => u.Projetos)
-                .WithOne()
-                .HasForeignKey("UsuarioId")
-                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Navigation(u => u.Projetos)
                 .UsePropertyAccessMode(PropertyAccessMode.Field);

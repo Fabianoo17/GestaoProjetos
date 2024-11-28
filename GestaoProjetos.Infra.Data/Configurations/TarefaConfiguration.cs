@@ -33,10 +33,6 @@ namespace GestaoProjetos.Infra.Data.Configurations
                 .IsRequired()
                 .HasConversion<string>();
 
-            builder.HasMany(t => t.Comentarios)
-                .WithOne()
-                .HasForeignKey("TarefaId")
-                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Navigation(t => t.Comentarios)
                 .UsePropertyAccessMode(PropertyAccessMode.Field);

@@ -3,7 +3,7 @@ using GestaoProjetos.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace GestaoProjetos.Infra.Data
+namespace GestaoProjetos.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : EntityBase
     {

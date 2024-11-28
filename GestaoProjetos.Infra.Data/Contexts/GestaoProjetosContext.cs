@@ -16,7 +16,7 @@ namespace GestaoProjetos.Infra.Data.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=database.db"); // String de conexão para SQLite
+            optionsBuilder.UseSqlite("Data Source=database1.db"); // String de conexão para SQLite
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

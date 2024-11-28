@@ -26,10 +26,6 @@ namespace GestaoProjetos.Infra.Data.Configurations
                 .HasConversion(v => v.ToString("yyyy-MM-dd HH:mm:ss"),
                                v => DateTime.Parse(v));
 
-            builder.HasMany(p => p.Tarefas)
-                .WithOne()
-                .HasForeignKey("ProjetoId")
-                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Navigation(p => p.Tarefas)
                 .UsePropertyAccessMode(PropertyAccessMode.Field);
